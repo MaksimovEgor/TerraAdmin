@@ -12,7 +12,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import SearchAppBar from "./Navigation";
 import {Box, Button, ButtonGroup, Container} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -82,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'inherit',
     },
     inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
+        padding: theme.spacing(1, 10, 1, 10),
         // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
@@ -173,7 +172,7 @@ export default function PermanentDrawerLeft() {
 
 
             {cards.map((card) => (
-                <Container key='card'>
+                <Container key={card}>
                     <main className={classes.content}>
                         <div className={classes.toolbar}/>
 

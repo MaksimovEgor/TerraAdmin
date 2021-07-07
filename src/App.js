@@ -1,16 +1,24 @@
 import './App.css';
-import PermanentDrawerLeft from "./components/Drawer";
-
 import React from "react";
-import {CssBaseline} from "@material-ui/core";
-
+import EventsPageAlbum from "./components/EventsPageAlbum";
+import PermanentDrawerLeft from "./components/DrawerPage";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function App() {
     return (
-        <>
-            <CssBaseline />
-            <PermanentDrawerLeft />
-            </>
+        <Router>
+            <Switch>
+                <Route path="/dobro"><PermanentDrawerLeft /> </Route>
+                <Route path="/events"><EventsPageAlbum /> </Route>
+            </Switch>
+        </Router>
+
+
     );
 }
 
